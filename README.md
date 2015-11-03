@@ -10,9 +10,10 @@ softwares in this specific order on your system, as by testing using the
 good old method of 'trial and error' this order of installing them works
 the best for everyone.
 
-1) Node JS
-2) NPM
-3) Bower
+* Node JS
+* NPM
+* Bower
+
 4) Polymer by Google [ recommended to do using Bower only, as it works
 the best like that to maintain and to use the Polymer files in day to
 day life { no more spaghetti code !! }, for more details visit the
