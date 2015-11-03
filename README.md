@@ -9,6 +9,7 @@ To run this Project on your system, you need to install this list of
 softwares in this specific order on your system, as by testing using the
 good old method of 'trial and error' this order of installing them works
 the best for everyone.
+
 1) Node JS
 2) NPM
 3) Bower
