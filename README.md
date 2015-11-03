@@ -13,19 +13,18 @@ the best for everyone.
 * Node JS
 * NPM
 * Bower
-
-4) Polymer by Google [ recommended to do using Bower only, as it works
+* Polymer by Google [ recommended to do using Bower only, as it works
 the best like that to maintain and to use the Polymer files in day to
 day life { no more spaghetti code !! }, for more details visit the
 Polymer website.]
-5) The clone of the website on your system ( Obviously :P )
-6) All the Polymer Element Catalogue's elements downloaded on your
+* The clone of the website on your system ( Obviously :P )
+* All the Polymer Element Catalogue's elements downloaded on your
 system through Bower [ or you can download the dependencies/libraries
 only used in the website { this is mentioned in the website code itself
-in the <link></link> tags (ignore the file path) in the <head></head>
-tag }, but you will have to install the new dependencies used, later
-through Bower or the new features will not run on your system]
-7) Apache installed and running on your system ( the software
+in the <link></link> tags (ignore the file path) in the <head></head>tag }, 
+but you will have to install the new dependencies used, later
+through Bower or the new features will not run on your system, as and when they come]
+* Apache installed and running on your system ( the software
 recommended to accomplish this is WAMP )
 
 Once you have all of this installed (Whew), you can run the website on
