@@ -1,0 +1,146 @@
+<!doctype html>
+<!--
+Rishit.C 
+Started on Thrusday, 8-10-15 (DD/MM/YY)
+
+Software Used :-
+1) Fontawesome
+2) Google Fonts
+3) Polymer
+
+Softwares to be used are :-
+1) OLA API
+
+Just had a couple of questions :
+1) Do we need to put <meta> tags ?
+-->
+
+<html>
+<head>
+  <title>The R&D Group</title>
+  <script src="bower_components/webcomponentsjs/webcomponents"></script>
+    <!-- Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-tab/paper-tab.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!-- This the Link to Google Fonts. This is the same font used on Ubuntu OS. It is really neat and looks pretty modern and contemporary so this will be our website's font -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700italic,700,500,500italic,400italic,900italic,300' rel='stylesheet' type='text/css'>
+
+<!-- This is the direct link to use fontawesome -->
+
+<!-- This Code Defines the Characteristics of the different ELEMENTS EXCEPT POLYMER in the webpage -->
+  <style type="text/css">
+  /* Ubuntu Font initializer */
+    .body{
+      font-family: 'Roboto', sans-serif;
+    }
+  /* End Of Ubuntu Font initializer */
+    h4 { font-family: 'Roboto', sans-serif; font-weight: 400; }
+    .test {font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 900%; margin-right: 20px; margin-left: 25px; margin-top: 15px;color:white;}
+    .test-2 {font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 110%; margin-right: 20px; margin-left: 25px; margin-bottom: 5px; color:white; letter-spacing: 4px;}
+/*----------------------------------------------------------------------------------------------------------------------------*/
+html { 
+  background: url(Marshmallow-Wallpaper.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+<!-- That's the end of this style tag -->
+
+<!-- This Code Defines the Characteristics of the different Polymer Elements in the webpage -->
+<style is="custom-style">
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        paper-button {
+            --paper-button-ink-color: green;
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        paper-button[toggles][active].colorful {
+            background-color: #7CB342;
+            transition: all 0.75s;
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        :root {
+        --paper-tab-ink: #FAFAFA;
+        --paper-tabs-selection-bar-color: #FF6F00;
+        paper-progress {
+            --paper-progress-active-color: #e91e63;
+            --paper-progress-secondary-color: #f8bbd0;
+            --paper-progress-container-color: #64ffda;
+            --paper-progress-height: 6px;
+}
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+</style>
+<!-- That's the end of this style tag -->
+</head>
+<body class="fullbleed vertical layout" onload="startTime(); date()">
+  <center>
+<div id="time" class="test"></div>
+</center>
+<center>
+<div id="date" class="test-2"></div>
+</center>
+<!-- These are the icons. I need them to be draggable and also the property to be snappable so as to make it possible to exchange app positions as in  the real ui. I was able to make it draggable but not snappable so I need help there -->
+<!-- to arrange the icons the way they are I have used polymer's iron-flex-layout but I feel this may have to be removed to get the above feature -->
+<div class="layout horizontal">
+  <div id="draggable1"><center>
+    <a href="homepage.html" id="check"><img src="Settings-icon.png" height="65px" width="65px" style="margin-right: 20px; margin-left: 25px; margin-top: 35px; margin-bottom: 5px; float: right;"></a>
+    <h4 style="color: white;">Settings</h4></center>
+  </div>
+  <div id="draggable2"><center>
+    <a href=""><img src="slack-chat.png" height="65px" width="65px" style="margin-right: 20px; margin-left: 25px; margin-top: 35px; margin-bottom: 5px; float: right;"></a>
+    <h4 style="color: white;">Slack</h4></center>
+</div>
+</div>
+
+<script>
+// time function for clock widget
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            h = h % 12;
+    h = h ? h : 12; // the hour '0' should be '12'
+        document.getElementById('time').innerHTML = h + ":" + m;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+// date function for the clock widget
+function date() {
+    var today = new Date();
+    var d = today.getDay();
+    var M = today.getMonth();
+    var D = today.getDate();
+    var days = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
+    var months = ["JANUARY","FEBUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];
+    document.getElementById('date').innerHTML = days[d] + "," + " "+ months[M] + " " + D;
+    r = setTimeout(function () {
+            date()
+        }, 1000);
+}
+// this makes the icons draggable
+$(function() {
+    $( "#draggable1" ).draggable();
+    $( "#draggable2" ).draggable();
+  });
+</script>
+</body>
+</html>

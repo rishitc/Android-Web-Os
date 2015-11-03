@@ -1,0 +1,170 @@
+<!doctype html>
+<!--
+Rishit.C 
+Started on Thrusday, 8-10-15 (DD/MM/YY)
+
+Software Used :-
+1) Fontawesome
+2) Google Fonts
+3) Polymer
+
+Softwares to be used are :-
+1) OLA API
+
+Just had a couple of questions :
+1) Do we need to put <meta> tags ?
+2) What do we do for the background - Picture or colour
+-->
+
+<html>
+<head>
+  <title>The R&D Group</title>
+  <script src="bower_components/webcomponentsjs/webcomponents"></script>
+    <!-- Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-tab/paper-tab.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/iron-dropdown/iron-dropdown.html">
+    <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="bower_components/paper-menu/paper-submenu.html">
+    <link rel="import" href="bower_components/paper-menu/paper-menu-shared.css">
+    <link rel="import" href="bower_components/iron-icons/device-icons.html">
+    <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="bower_components/iron-menu-behavior/iron-menu-behavior.html">
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+    
+
+  <!-- This the Link to Google Fonts. This is the same font used on Andoid M. It is really neat and looks pretty modern and contemporary so this will be our website's font -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700italic,700,500,500italic,400italic,900italic,300' rel='stylesheet' type='text/css'>
+
+<!-- This is the direct link to use fontawesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- This Code Defines the Characteristics of the different ELEMENTS EXCEPT POLYMER in the webpage -->
+  <style type="text/css">
+  /* Andoid M Font initializer */
+    .body{
+      font-family: 'Roboto', sans-serif;
+    }
+  /* End Of Ubuntu Font initializer */
+    h1 { font-family: 'Roboto:700', sans-serif; }
+    h2 { font-family: 'Roboto:500italic', sans-serif; }
+    h3 { font-family: 'Roboto:500', sans-serif; }
+    p { font-family: 'Roboto:400', sans-serif; }
+    paper-tab {font-family: 'Roboto:400', sans-serif;background: #3F51B5;color: white; }
+    paper-button {font-family: 'Roboto:400', sans-serif;}
+    .SettingsMenuButton {
+      border-bottom: thin solid black;
+    }
+    .SettingsTitle {
+      color:#009279; 
+      margin-left: 20px;
+    }
+    .SettingsIcon {
+      float:left; 
+      color:#009279;
+    }
+    .FixCase {
+      text-transform: capitalize;
+    }
+    .paper-menu-fix {
+          Width: 200px;
+      }
+      .circular {
+        background: url(Xbox-One-logo.jpg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow:hidden;
+    -webkit-border-radius:25px;
+    -moz-border-radius:25px;
+    border-radius:25px;
+    width:50px;
+    height:50px;
+
+  }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+</style>
+<!-- That's the end of this style tag -->
+
+<!-- This Code Defines the Characteristics of the different Polymer Elements in the webpage -->
+<style is="custom-style">
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        paper-button {
+            --paper-button-ink-color: #4C4C4C;
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        paper-button[toggles][active].colorful {
+            background-color: #FFFFFF;
+            transition: all 0.75s;
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+        :root {
+        --paper-tab-ink: #FAFAFA;
+        --paper-tabs-selection-bar-color: #FF6F00;
+        paper-progress {
+            --paper-progress-active-color: #e91e63;
+            --paper-progress-secondary-color: #f8bbd0;
+            --paper-progress-container-color: #64ffda;
+            --paper-progress-height: 6px;
+            }
+        }
+/*----------------------------------------------------------------------------------------------------------------------------*/
+</style>
+<!-- That's the end of this style tag -->
+</head>
+<body class="fullbleed vertical layout">
+<!-- Beginning of Full Bleed <div></div> container -->
+<div flex>
+<!-- Start Of The Toolbar -->
+<paper-material elevation="3" >
+<paper-toolbar style="background-color: #4C4C4C;">
+  <paper-ripple></paper-ripple>
+  <div style="position:relative" class="circular">
+  <paper-ripple opacityDecayVelocity=2></paper-ripple>
+</div>
+
+
+<div class="title"><h1><b>Settings</b></h1></div>
+  <paper-icon-button icon="search" on-tap="moreAction"></paper-icon-button>
+  <paper-menu-button horizontal-align="right"> 
+  <paper-icon-button icon="more-vert"  class="dropdown-trigger"></paper-icon-button>
+  <paper-menu class="dropdown-content paper-menu-fix">
+    <paper-item>Help & Feedback</paper-item>
+  </paper-menu>
+</paper-menu-button>
+</paper-toolbar>
+<!-- End Of The Toolbar -->
+</paper-material>
+</div>
+<!-- End of Full Bleed <div></div> container -->
+
+
+<br>
+<paper-material elevation="2" style="
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;">
+<paper-card>
+<h2 class="SettingsTitle">General</h2>
+  <div class="card-content"><paper-menu>
+      <paper-item class="SettingsMenuButton"><iron-icon icon="perm-identity" class="SettingsIcon"></iron-icon><div style="margin-left: 35em;">About Account</div></paper-item>
+      <paper-item class="SettingsMenuButton"><iron-icon icon="device:storage" class="SettingsIcon"></iron-icon><div style="margin-left: 36.5em;">Storage</div></paper-item>
+      <paper-item class="SettingsMenuButton"><iron-icon icon="device:access-time" class="SettingsIcon"></iron-icon><div style="margin-left: 35.5em;">Date & Time</div></paper-item>
+      <paper-item class="SettingsMenuButton"><iron-icon icon="language" class="SettingsIcon"></iron-icon><div style="margin-left: 33.5em;">Launguage and Input</div></paper-item>
+    </paper-menu></div>
+</paper-card>
+</paper-material>
+<br><br>
+</body>
+</html>
