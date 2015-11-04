@@ -29,3 +29,19 @@ recommended to accomplish this is WAMP )
 
 Once you have all of this installed (Whew), you can run the website on
 your system, and future revisions of it.
+
+Current Build's Screen Shots :-
+
+ Home Screen :
+ 
+![Oops there looks to be a problem, the homescreen's image was supposed to be here.](Capture.PNG.jpg?raw=true "Optional Title")
+
+
+Settings Page :
+
+![Oops there looks to be a problem, the settings page's image was supposed to be here.](Capture3.PNG?raw=true "Optional Title")
+
+
+Yes The Icons Are Draggable (But... polishing of this feature is required, as you can see) :
+
+![Oops there looks to be a problem, the dragged-icons-on-the-homepage's was supposed to be here.](Capture1.PNG?raw=true "Optional Title")
