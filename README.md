@@ -34,7 +34,7 @@ Current Build's Screen Shots :-
 
  Home Screen :
  
-![Oops there looks to be a problem, the homescreen's image was supposed to be here.](Capture.PNG.jpg?raw=true "Optional Title")
+![Oops there looks to be a problem, the homescreen's image was supposed to be here.](Capture.PNG?raw=true "Optional Title")
 
 
 Settings Page :
