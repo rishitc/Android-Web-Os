@@ -13,6 +13,7 @@ the best for everyone.
 * Node JS
 * NPM
 * Bower
+* Git
 * Polymer by Google [ recommended to do using Bower only, as it works
 the best like that to maintain and to use the Polymer files in day to
 day life { no more spaghetti code !! }, for more details visit the
